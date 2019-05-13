@@ -48,8 +48,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361
     zulu-8 \
  && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME_8_X64=/usr/lib/jvm/zulu-8-amd64 \
- JAVA_HOME=$JAVA_HOME_8_X64
+ENV JAVA_HOME_8_X64=/usr/lib/jvm/zulu-8-amd64
+ENV JAVA_HOME=$JAVA_HOME_8_X64
 
 # Install SWIG
 RUN curl -sL https://downloads.sourceforge.net/project/swig/swig/swig-3.0.12/swig-3.0.12.tar.gz -o swig.tar.gz \
